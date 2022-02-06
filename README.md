@@ -12,8 +12,8 @@ Dr. Víctor Hugo Menéndez Domínguez
 
 ## Integrantes
 
-|Nombre  | Foto | Perfil
-|------------- | ------------- |:---------------:| -------------
+| Nombre | Foto | Perfil
+| ------------- | :---------------: |:---------------: |
 |Ricardo Alejandro Grimaldo Patiño  | <img src="/Integrantes/Grimaldo.jpeg" width="100">| [@RicGrimaldo](https://github.com/RicGrimaldo)
 |Alexis Ivan Ake Vela | <img src="/Integrantes/Alexis.jpeg" width="100"> | [@pajaroloco86](https://github.com/pajaroloco86)
 |Jose Fernando Chan Dzib | <img src="/Integrantes/Fer.jpeg" width="100"> | [@Jfeerchan23](https://github.com/Jfeerchan23)
