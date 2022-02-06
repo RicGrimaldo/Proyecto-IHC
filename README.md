@@ -17,4 +17,4 @@ Dr. Víctor Hugo Menéndez Domínguez
 |Ricardo Alejandro Grimaldo Patiño  | <img src="/Integrantes/Grimaldo.jpeg" width="100">| [@RicGrimaldo](https://github.com/RicGrimaldo)
 |Alexis Ivan Ake Vela | <img src="/Integrantes/Alexis.jpeg" width="100"> | [@pajaroloco86](https://github.com/pajaroloco86)
 |Jose Fernando Chan Dzib | <img src="/Integrantes/Fer.jpeg" width="100"> | [@Jfeerchan23](https://github.com/Jfeerchan23)
-|Irving Baez Cordova | <img src="/Integrantes/Irving.jpeg" width="100"> | [@IrvingBaez](https://github.com)
+|Irving Baez Cordova | <img src="/Integrantes/Irving.jpeg" width="100"> | [@IrvingBaez](https://github.com/IrvingBaez)
