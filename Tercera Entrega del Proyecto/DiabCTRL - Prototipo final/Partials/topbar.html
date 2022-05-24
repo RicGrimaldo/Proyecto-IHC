@@ -1,0 +1,54 @@
+<div class="container-fluid topnav-container">
+  <div class="container">
+    <div class="topnav d-flex justify-content-between align-items-center">
+      <a href="index.html" style="padding: 0px;"><img src="Images/app/Logo_white.png"></a>
+
+      <div class="d-flex">
+        <a id="index-nav" class="align-self-stretch" href="index.html">Inicio</a>
+        <a id="diet-nav" class="align-self-stretch" href="">Registro de Dieta</a>
+        <a id="gloucose-nav" class="align-self-stretch" href="gloucose.html">Registro de Glucosa</a>
+        <a id="recomendations-nav" class="align-self-stretch" href="">Recomendaciones</a>
+      </div>
+
+      <div class="d-flex flex-row dropbtn" onclick="myFunction();">
+        <div class="user-ctrl my-2 mr-0">
+          <div class="user-image-container">
+            <img src="Images/app/Face.jpg">
+          </div>
+        </div>
+
+        <div id="user-btn" class="my-2 px-1 position-relative">
+          <i class="fas fa-angle-down"></i>
+        </div>
+
+        <ul id="myDropdown" class="dropdown-content">
+          <li><a tabindex="-1" href="profile.html">Actualizar perfil</a></li>
+          <li><a tabindex="-1" href="login.html">Cerrar sesión</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  function myFunction() {
+    console.log("clicked");
+    $('#myDropdown').show();
+  }
+
+  $( document ).ready(function() {
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  });
+</script>

@@ -1,0 +1,147 @@
+:root{
+  --primary: #013C94;
+  --secondary: #599CFF;
+  --info: #387BE0;
+  --success: #36945B;
+  --dark: #373538;
+  --light: #E7E6EE;
+
+  --warning: #b8dd02;
+  --danger: #dd3502;
+}
+
+.btn-primary{
+  background-color: var(--primary);
+}
+
+.bg-primary{
+  background-color: var(--primary) !important;
+}
+
+.bg-info{
+  background-color: var(--light) !important;
+}
+
+body{
+  background-color: white !important;
+}
+
+footer{
+  background-color: #212529 !important;
+}
+
+label{
+  font-weight: 700;
+}
+
+.w-40{
+  width: 40% !important;
+}
+
+.topnav-container{
+ background-color: #1C2A73;
+ color: white;
+}
+
+.topnav a:hover {
+  background-color: #253899;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #253899;
+  color: white;
+}
+
+.text-primary{
+  color: var(--primary) !important;
+}
+
+.text-warning{
+  color: var(--warning) !important;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a img{
+  height: 50px;
+  width: auto;
+}
+
+.user-ctrl{
+  height: 50px;
+  width: 50px;
+  padding: 5px 0px 5px 5px;
+  margin: 1px;
+  background-color: transparent;
+}
+
+.user-image-container{
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.user-image-container img{
+  height: 46px;
+  margin: auto;
+  display: block;
+}
+
+#user-btn{
+  background-color: transparent;
+  width: 20px;
+}
+
+.dropbtn:hover{
+  background-color: #253899;
+}
+
+#user-btn i{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  top: 60px;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#myDropdown{
+  padding: 10px;
+}
+
+#myDropdown li{
+  list-style-type: none;
+}
+
+#myDropdown li a{
+  padding: 0px;
+  color: black;
+  float: none;
+}

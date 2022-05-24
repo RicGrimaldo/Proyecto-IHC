@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/dc62bf2069.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Styles/application.css">
+    <link rel="icon" href="Images/app/BrowserIcon.png">
+    <script src="Scripts/utilities.js"></script>
+    <meta charset="UTF-8"/>
+    <title>DiabCtrl</title>
+  </head>
+
+  <body>
+    <div class="container-fluid topnav-container">
+      <div class="container">
+        <div class="topnav d-flex justify-content-between align-items-center">
+          <a href="index.html" style="padding: 0px;"><img src="Images/app/Logo_white.png"></a>
+
+          <div class="d-flex">
+            <a id="index-nav" class="align-self-stretch" href="index.html">Inicio</a>
+            <a id="diet-nav" class="align-self-stretch" href="">Registro de Dieta</a>
+            <a id="gloucose-nav" class="align-self-stretch" href="gloucose.html">Registro de Glucosa</a>
+            <a id="recomendations-nav" class="align-self-stretch" href="">Recomendaciones</a>
+          </div>
+
+          <div class="d-flex flex-row dropbtn" onclick="myFunction();">
+            <div class="user-ctrl my-2 mr-0">
+              <div class="user-image-container">
+                <img src="Images/app/Face.jpg">
+              </div>
+            </div>
+
+            <div id="user-btn" class="my-2 px-1 position-relative">
+              <i class="fas fa-angle-down"></i>
+            </div>
+
+            <ul id="myDropdown" class="dropdown-content">
+              <li><a tabindex="-1" href="profile.html">Actualizar perfil</a></li>
+              <li><a tabindex="-1" href="login.html">Cerrar sesión</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- START CONTENT -->
+
+    <style>
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-4" style="text-align: center;">
+          <h1>¡Registra tus niveles de glucosa!</h1>
+        </div>
+
+        <div class="col-12">
+          <img class="center" src="Images/gloucose/glucosa.jpg.webp">
+        </div>
+
+        <div class="col-12 d-flex justify-content-center my-4">
+          <div class="w-25">
+            <div class="col-12 text-center form-group">
+              <label>Nivel de glucosa</label>
+              <input type="text" class="form-control w-100" placeholder="Introduce el nivel de glucosa">
+            </div>
+
+            <div class="col-12 text-center">
+              <button type="button" class="btn btn-primary w-100">GUARDAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 my-4" style="text-align: center;">
+          <h1>Historial</h1>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center my-4">
+          <div id="table" class="w-50">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Fecha</th>
+                  <th>Hora</th>
+                  <th>Glucosa (mg/dl)</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>19/may/2022</td>
+                  <td>4:29 pm</td>
+                  <td>115</td>
+                </tr>
+                <tr>
+                  <td>18/may/2022</td>
+                  <td>4:32 pm</td>
+                  <td>120</td>
+                </tr>
+                <tr>
+                  <td>17/may/2022</td>
+                  <td>4:25 pm</td>
+                  <td>122</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <img id="graph" class="center" src="Images/gloucose/graph.png" style="display: none;">
+        </div>
+
+        <div class="col-12 d-flex justify-content-center my-4">
+          <div class="w-25">
+            <div class="col-12 text-center">
+              <button id="toggle-btn" type="button" class="btn btn-primary w-100" onclick="showGraph();">Ver gŕafica</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END CONTENT -->
+
+    <footer class="mt-4 pt-5 pb-0 pb-md-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-4 mb-0 pb-0">
+            <img src="Images/app/Logo_white.png" height="59" />
+            <p class="mt-4 text-white" style="font-size: 18px;">C. 60 491A, Parque Santa Lucia, Centro, 97000 Mérida, Yuc.</p>
+            <p class="mt-4 text-white" style="font-size: 18px;">soporte@diabctrl.com</p>
+          </div>
+
+          <div class="col-3 mt-4 mt-sm-0 pt-2 pt-sm-0 d-flex justify-content-center">
+            <img src="Images/app/Icon.png" style="height: 30vh;">
+          </div>
+
+          <div class="col-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+            <h4 class="footer-head text-center py-2" style="background-color: var(--light); font-size: 30px;">
+              <span class="text-primary">¿Tienes dudas? Hablemos</span>
+            </h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-1 position-relative">
+                  <label style="color: white;">Correo</label>
+                  <input name="reason" id="footer_subject" type="text" class="contact-field form-control" placeholder="Escribe tu Correo">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="position-relative">
+                  <label style="color: white;">Mensaje</label>
+                  <textarea name="comments" id="footer_comments" rows="2" class="contact-field form-control" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <button type="submit" id="contact-submit" name="send" class="btn btn-primary mt-2">Enviar mensaje</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="Scripts/utilities.js"></script>
+  </body>
+</html>
+
+<script>
+  $( document ).ready(function(){
+    $('#gloucose-nav').addClass('active');
+  });
+
+  function showGraph(){
+    $('#toggle-btn').html('Ver tabla');
+    $('#toggle-btn').attr('onclick', 'showTable();');
+    $('#table').hide();
+    $('#graph').show();
+  }
+
+  function showTable(){
+    $('#toggle-btn').html('Ver gráfica');
+    $('#toggle-btn').attr('onclick', 'showGraph();');
+    $('#table').show();
+    $('#graph').hide();
+  }
+
+  function myFunction() {
+    console.log("clicked");
+    $('#myDropdown').show();
+  }
+
+  $( document ).ready(function() {
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  });
+</script>

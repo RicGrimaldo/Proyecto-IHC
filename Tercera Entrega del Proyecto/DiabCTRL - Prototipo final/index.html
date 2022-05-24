@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/dc62bf2069.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Styles/application.css">
+    <link rel="icon" href="Images/app/BrowserIcon.png">
+    <script src="Scripts/utilities.js"></script>
+    <meta charset="UTF-8"/>
+    <title>DiabCtrl</title>
+  </head>
+
+  <body>
+    <div class="container-fluid topnav-container">
+      <div class="container">
+        <div class="topnav d-flex justify-content-between align-items-center">
+          <a href="index.html" style="padding: 0px;"><img src="Images/app/Logo_white.png"></a>
+
+          <div class="d-flex">
+            <a id="index-nav" class="align-self-stretch" href="index.html">Inicio</a>
+            <a id="diet-nav" class="align-self-stretch" href="">Registro de Dieta</a>
+            <a id="gloucose-nav" class="align-self-stretch" href="gloucose.html">Registro de Glucosa</a>
+            <a id="recomendations-nav" class="align-self-stretch" href="">Recomendaciones</a>
+          </div>
+
+          <div class="d-flex flex-row dropbtn" onclick="myFunction();">
+            <div class="user-ctrl my-2 mr-0">
+              <div class="user-image-container">
+                <img src="Images/app/Face.jpg">
+              </div>
+            </div>
+
+            <div id="user-btn" class="my-2 px-1 position-relative">
+              <i class="fas fa-angle-down"></i>
+            </div>
+
+            <ul id="myDropdown" class="dropdown-content">
+              <li><a tabindex="-1" href="profile.html">Actualizar perfil</a></li>
+              <li><a tabindex="-1" href="login.html">Cerrar sesión</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- START CONTENT -->
+
+    <style>
+      #food-image{
+        width: 100%;
+      }
+
+      .container-fluid{
+        padding: 0px;
+      }
+
+      .recomendation-card{
+        text-align: center;
+      }
+
+      .recomendation-card .image-container{
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+      }
+
+      .recomendation-card img{
+        height: 35vh;
+        margin: auto;
+        display: block;
+      }
+    </style>
+
+    <div class="container-fluid">
+      <img id="food-image" src="Images/index/HealthyFood.jpg">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-4" style="text-align: center;">
+          <h1>Recomendaciones generales</h1>
+        </div>
+
+        <div class="col-4 recomendation-card">
+          <div class="image-container mb-3">
+            <img src="Images/index/AvoidSmocking.jpeg">
+          </div>
+          <h4>Evite fumar</h4>
+          El tabaco se asocia a enfermedades cardiovasculares. El riesgo de estas enfermedades en una persona con diabetes es muy alto.
+        </div>
+
+        <div class="col-4 recomendation-card">
+          <div class="image-container mb-3">
+            <img src="Images/index/Exercise.webp">
+          </div>
+          <h4>Incremente su actividad física</h4>
+          El ejercicio físico ayuda a reducir el peso, permite quemar el azúcar, y por tanto reducir su cantidad en sangre, aumenta la masa muscular y disminuye el riesgo de desarrollar enfermedades cardiovasculares.
+        </div>
+
+        <div class="col-4 recomendation-card">
+          <div class="image-container mb-3">
+            <img src="Images/index/Vaccine.jpg">
+          </div>
+          <h4>Vacúnese</h4>
+          Todos los pacientes con diabetes deben vacunarse anualmente de la gripe. Los pacientes adultos con diabetes deben recibir la vacuna de la hepatitis B.
+        </div>
+      </div>
+    </div>
+
+    <!-- END CONTENT -->
+
+    <footer class="mt-4 pt-5 pb-0 pb-md-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-4 mb-0 pb-0">
+            <img src="Images/app/Logo_white.png" height="59" />
+            <p class="mt-4 text-white" style="font-size: 18px;">C. 60 491A, Parque Santa Lucia, Centro, 97000 Mérida, Yuc.</p>
+            <p class="mt-4 text-white" style="font-size: 18px;">soporte@diabctrl.com</p>
+          </div>
+
+          <div class="col-3 mt-4 mt-sm-0 pt-2 pt-sm-0 d-flex justify-content-center">
+            <img src="Images/app/Icon.png" style="height: 30vh;">
+          </div>
+
+          <div class="col-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+            <h4 class="footer-head text-center py-2" style="background-color: var(--light); font-size: 30px;">
+              <span class="text-primary">¿Tienes dudas? Hablemos</span>
+            </h4>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="mb-1 position-relative">
+                  <label style="color: white;">Correo</label>
+                  <input name="reason" id="footer_subject" type="text" class="contact-field form-control" placeholder="Escribe tu Correo">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="position-relative">
+                  <label style="color: white;">Mensaje</label>
+                  <textarea name="comments" id="footer_comments" rows="2" class="contact-field form-control" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <button type="submit" id="contact-submit" name="send" class="btn btn-primary mt-2">Enviar mensaje</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="Scripts/utilities.js"></script>
+  </body>
+</html>
+
+<script>
+  $( document ).ready(function(){
+    $('#index-nav').addClass('active');
+  });
+
+  function myFunction() {
+    console.log("clicked");
+    $('#myDropdown').show();
+  }
+
+  $( document ).ready(function() {
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  });
+</script>
